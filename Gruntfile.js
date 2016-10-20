@@ -148,6 +148,13 @@ module.exports = function(grunt) {
           spawn: false
         },
       },
+      scripts: {
+          files: ['src/js/*.js'],
+          tasks: ['copy:js'],
+          options: {
+              spawn: false,
+          },
+      },
     },
 
     // локальный сервер, автообновление

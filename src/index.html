@@ -2,22 +2,32 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Lavrik</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <video id="bg" loop autoplay muted poster='img/night.png'>
-    <source src="background/nightStars.mp4" type="video/mp4">
-    <source src="background/nightStars.webm" type="video/webm">
+    <source src="background/night.mp4" type="video/mp4">
+    <source src="background/night.webm" type="video/webm">
       Your browser is not supported video tag
     </video>
     <main class="container">
-      <nav class='navbar centering'>
-        <ul class="navbar__list">
-          <li><a href="about.html">Обо мне</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
+      <div class="page" id="page-load">
+        <nav class="navbar centering">
+          <ul class="navbar__list">
+            <li><a href="about.html">Обо мне</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
     </main>
+    <footer class="contacts container">
+      <div class="contacts__site">
+        <span class="contacts__site-adress">lavrik-site.com</span>
+      </div>
+    </footer>
   </body>
 </html>

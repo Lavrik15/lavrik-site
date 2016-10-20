@@ -1,35 +1,49 @@
 body {
-    background: url(../img/poster-background.png) no-repeat 50% 50%;
+  background-color: gray;
+  color: @white-text-color;
+  font-family: "SegoeUILight", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+@font-face {
+  font-family: "SegoeUILight";
+  src: url("../fonts/SegoeUILight/SegoeUILight.eot");
+  src: url("../fonts/SegoeUILight/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+  url("../fonts/SegoeUILight/SegoeUILight.woff") format("woff"),
+  url("../fonts/SegoeUILight/SegoeUILight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
 #bg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    will-change: transform;
-    background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  will-change: transform;
+  background-size: cover;
 }
 .container {
-  min-width: 320px;
   max-width: 940px;
   margin: 0 auto;
   padding: 0 10px;
 }
 .centering {
-  width: 200px;
+  width: 250px;
   position: absolute;
-  height: 200px;
+  height: 100px;
   top: 0;
   bottom: 0;
   left: 50%;
   margin: auto;
-  margin-left: -100px;
+  margin-left: -125px;
 }
 
