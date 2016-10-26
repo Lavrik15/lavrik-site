@@ -1,24 +1,16 @@
 $(document).ready(function(){
-  $('a').on('click', clickLinklistener);
+  $('.navbar__list-link').bind('click', clickLink);
 });
-window.addEventListener("popstate", function(e) {
-  getContent(location.pathname, false);
-  console.log("1231231231231231231232132131212312312");
-});
-function getContent(url, addEntry) {
-  console.log(url);
-  $(".page").load(url + " #page-load", function(){
-    console.log('курлык');
-    if(addEntry == true) {
-       history.pushState(null, null, url); 
-    }
-  });
-}
-// html5 api history
-function clickLinklistener() {
-  console.log("клик");
-  var href = $(this).attr("href");
-  getContent(href, true);
-  console.log(href);
-  return false;
+function clickLink() {
+  console.log($(this));
+  $('.navbar__list-link').removeClass('active');
+  $(this).addClass('active');
+  if ($(this).hasClass('contacts-link')) {
+    $('.about').slideUp(1000);
+    $('.contacts-page').slideDown(1000);
+  }
+  if ($(this).hasClass('about-link')) {
+    $('.contacts-page').slideUp(2000);
+    $('.about').slideDown(2000);
+  }
 }

@@ -5,8 +5,10 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Lavrik</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="js/script.js"></script>
+<!--     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css'> -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
   </head>
   <body>
     <video id="bg" loop autoplay muted poster='img/night.png'>
@@ -15,19 +17,157 @@
       Your browser is not supported video tag
     </video>
     <main class="container">
-      <div class="page" id="page-load">
-        <nav class="navbar centering">
-          <ul class="navbar__list">
-            <li><a href="about.html">Обо мне</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-          </ul>
-        </nav>
-      </div>
+      <article class="navbar centering">
+        <ul class="navbar__list">
+          <li><span class="navbar__list-link about-link" href="about.html">Обо мне</span></li>
+          <li><span class="navbar__list-link contacts-link" href="contacts.html">Контакты</span></li>
+        </ul>
+        <section class="about">
+          <h1 class="about__title">Обо мне</h1>
+          <p class="about__title-header">Junior web-developer. Занимаюсь html/ccs версткой. Умею пользоваться: js, jQuery,
+          LESS. Автоматизирую процессы с помощью Grunt. Легко учусь</p>
+          <h2 class="about__title about__title--example">примеры работ</h2>
+          <div class="about__image-wrapper">
+            <section class="about__preview-block">
+              <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="img/work1-min.png" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="img/work1_311.png" itemprop="thumbnail" alt="Image description" />
+                  </a>
+                  <figcaption itemprop="caption description">
+                    <a class="about__site-text" href="http://62.141.123.25/teleclick/v11/build/index.html">teleclick</a>
+                  </figcaption>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="img/work2-min.jpg" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="img/work2_311.png" itemprop="thumbnail" alt="beeline" />
+                  </a>
+                  <figcaption itemprop="caption description">
+                  <a class="about__site-text" href="http://62.141.123.25/amediateka2/main.php?q=info/film_block/-1/45/575">Amediateka beeline</a>
+                  </figcaption>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="img/work4-min.png" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="img/work4_311.png" itemprop="thumbnail" alt="Pink adaptive" />
+                  </a>
+                  <figcaption itemprop="caption description">
+                  <a class="about__site-text" href="https://lavrik15.github.io/Pink-adaptive/">Pink</a>
+                  </figcaption>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="img/work3-min.jpg" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="img/work3_311.png" itemprop="thumbnail" alt="Pink adaptive" />
+                  </a>
+                  <figcaption itemprop="caption description">
+                  <a class="about__site-text" href="https://lavrik15.github.io/Pink-adaptive/">Pink</a>
+                  </figcaption>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="img/work5-min.png" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="img/work5_311.png" itemprop="thumbnail" alt="Pink adaptive" />
+                  </a>
+                  <figcaption itemprop="caption description">
+                  <a class="about__site-text" href="https://lavrik15.github.io/Pink-adaptive/">Pink</a>
+                  </figcaption>
+                </figure>
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                  <a href="img/work6-min.png" itemprop="contentUrl" data-size="1024x1024">
+                    <img src="img/work6_311.png" itemprop="thumbnail" alt="Pink adaptive" />
+                  </a>
+                  <figcaption itemprop="caption description">
+                  <a class="about__site-text" href="https://lavrik15.github.io/Pink-adaptive/">Pink</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+
+
+
+            <!-- Root element of PhotoSwipe. Must have class pswp. -->
+            <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+                <!-- Background of PhotoSwipe.
+                     It's a separate element, as animating opacity is faster than rgba(). -->
+                <div class="pswp__bg"></div>
+
+                <!-- Slides wrapper with overflow:hidden. -->
+                <div class="pswp__scroll-wrap">
+
+                    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+                    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+                    <div class="pswp__container">
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                        <div class="pswp__item"></div>
+                    </div>
+
+                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+                    <div class="pswp__ui pswp__ui--hidden">
+
+                        <div class="pswp__top-bar">
+
+
+                            <div class="pswp__counter"></div>
+
+                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+
+
+                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                            <div class="pswp__preloader">
+                                <div class="pswp__preloader__icn">
+                                  <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                        </button>
+
+                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                        </button>
+
+                        <div class="pswp__caption">
+                            <div class="pswp__caption__center"></div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+            </div>
+            </section>
+          </div>
+        </section>
+        <section class="contacts-page">
+          <span>Лаврик Андрей</span>
+          <span>Санкт-Петербург</span>
+          <span>8 911 0841002</span>
+          <span>lavrik.aw@ya.ru</span>
+          <a class="contacts-page__link" href="https://vk.com/lavrik_andrey">
+            <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 512 512" height="30px" id="Слой_1" version="1.1" viewBox="0 0 512 512" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="vkontakte_1_"><g><path d="M511.992,256.001c0,141.387-114.607,255.98-255.996,255.98c-141.381,0-255.988-114.594-255.988-255.98    C0.008,114.62,114.615,0.019,255.996,0.019C397.385,0.019,511.992,114.62,511.992,256.001z" fill="#33739E"/><path d="M504.844,316.007L396.268,207.415l-74.765,47.875l-50.71-50.711l-52.554,52.545l39.187,39.188    l-7.875,5.047l-94.271-94.287l-32.109,32.102l87.241,87.24L179.6,346.14l153.88,153.881    C418.275,473.122,483.883,403.271,504.844,316.007z" opacity="0.15"/></g><path d="M261.199,368.546c7.695,0,10.852-5.117,10.742-11.531   c-0.391-24.203,9.039-37.234,26.039-20.266c18.813,18.797,22.702,31.797,45.554,31.797c8.671,0,32.015,0,40.444,0   c31.82,0,3.469-31.891-18.945-52.672c-21.312-19.75-22.319-20.227-3.969-44c22.789-29.514,52.578-67.553,26.219-67.553   c-5.156,0-1.477,0-50.319,0c-9.773,0-10.484,5.695-13.945,13.891c-12.569,29.602-36.483,67.99-45.554,62.123   c-9.516-6.133-5.164-26.92-4.438-62.951c0.195-9.516,0.141-16.063-14.414-19.43c-39.78-9.227-74.24,8.906-60.163,11.516   c19.844,3.703,17.945,43.156,13.328,61.693c-8.063,32.258-38.39-25.537-51.015-54.334c-3.055-6.922-3.984-12.508-14.867-12.508   c-5.969,0-32.301,0-41.152,0c-7.926,0-11.815,3.625-9.034,10.992c2.757,7.352,34.608,78.475,72.257,119.053   C202.794,371.921,237.238,368.546,261.199,368.546z" fill="#F4F6F9" id="V_kontakte_1_"/></g></svg>
+          </a>
+          <a class="contacts-page__link" href="https://telegram.me/lavrik15">
+            <?xml version="1.0" ?><svg height="30" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="30" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs12"/><g id="g3885" transform="translate(297.22034,0)"><rect height="512" id="rect2987" rx="64" ry="64" style="fill:#64a9dc;fill-opacity:1;fill-rule:nonzero;stroke:none" width="512" x="-297.22034" y="5.6843419e-014"/><path d="M 127.88103,94.198045 -218.4667,227.78507 c -23.63879,9.48433 -23.4986,22.66901 -4.30871,28.54816 l 86.38017,26.96101 33.05108,101.33207 c 4.018041,11.09077 2.03732,15.48953 13.683731,15.48953 8.98786,0 12.97504,-4.09778 17.98087,-8.98786 3.1833,-3.11513 22.08378,-21.49087 43.18752,-42.00936 l 89.85158,66.38643 c 16.5339,9.12161 28.47227,4.39617 32.58935,-15.35577 L 152.92948,122.20987 C 158.96812,98.000015 143.69981,87.018565 127.88103,94.198045 z M -122.83885,277.09998 71.862531,154.2616 c 9.71969,-5.89458 18.63166,-2.72542 11.31455,3.76981 l -166.71528,150.41932 -6.49136,69.23533 -32.809291,-100.58608 z" id="path9" style="fill:#ffffff"/></g></svg>
+          </a>
+          <a class="contacts-page__link" href="skype:lavrichini?add">
+            <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 512 512" height="30px" id="Слой_1" version="1.1" viewBox="0 0 512 512" width="30px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="skype_1_"><g><path d="M511.994,256c0,141.387-114.607,255.988-255.996,255.996C114.613,511.988,0.006,397.387,0.006,256    c0-141.381,114.607-255.996,255.992-255.996C397.387,0.004,511.994,114.619,511.994,256z" fill="#00B0F2"/><path d="M152.086,262.076l5.219,102.109l143.771,143.771c99.936-17.766,179.785-93.461,203.59-191.178    L354.684,166.797l-148.989-25.406L152.086,262.076z" opacity="0.1"/></g><path d="M393.449,289.756c1.383-7.883,2.109-16.016,2.109-24.273   c0-77.076-62.483-139.59-139.561-139.59c-8.289,0-16.391,0.734-24.289,2.123c-13.101-8.975-28.921-14.232-45.998-14.232   c-44.961,0.008-81.418,36.443-81.41,81.404c-0.008,17.094,5.25,32.93,14.234,46.039c-1.375,7.867-2.094,15.998-2.109,24.256   c0,77.078,62.473,139.592,139.572,139.592c8.266-0.008,16.398-0.727,24.289-2.109c13.078,8.984,28.922,14.219,46.007,14.219   c44.952,0,81.405-36.443,81.405-81.404C407.691,318.709,402.434,302.85,393.449,289.756z M315.951,322.529   c-5.313,7.563-13.125,13.484-23.391,17.766c-10.258,4.297-22.43,6.422-36.484,6.422c-16.891,0.008-30.82-2.898-41.78-8.766   c-7.75-4.211-14.063-9.836-18.945-16.891c-4.843-7.023-7.296-13.875-7.296-20.539c-0.008-3.852,1.477-7.172,4.358-9.906   c2.938-2.766,6.648-4.117,11.164-4.117c3.656,0,6.766,1.063,9.281,3.219c2.492,2.117,4.688,5.32,6.453,9.508   c2.18,5.039,4.547,9.195,7.069,12.555c2.516,3.367,6.078,6.148,10.664,8.297c4.586,2.203,10.625,3.297,18.063,3.297   c10.297,0,18.633-2.219,25.031-6.594c6.398-4.406,9.625-9.867,9.625-16.461c0-5.211-1.711-9.445-5.18-12.695   c-3.469-3.266-7.938-5.75-13.438-7.469c-5.477-1.688-12.781-3.508-21.977-5.438c-12.273-2.68-22.563-5.773-30.835-9.273   c-8.258-3.57-14.883-8.367-19.688-14.482c-4.898-6.125-7.304-13.742-7.304-22.773c-0.008-8.688,2.554-16.352,7.702-23.055   c5.102-6.703,12.547-11.891,22.258-15.477c9.741-3.633,21.155-5.414,34.28-5.414c10.492,0,19.602,1.164,27.242,3.586   c7.664,2.383,14.008,5.547,19.07,9.508c5.008,4,8.742,8.164,11.063,12.508c2.336,4.344,3.492,8.609,3.492,12.734   c0,3.813-1.453,7.242-4.32,10.273c-2.938,3.023-6.586,4.563-10.938,4.563c-3.953,0-7-0.93-9.047-2.742   c-2.047-1.82-4.289-4.82-6.688-8.961c-3.117-5.914-6.852-10.586-11.211-13.914c-4.359-3.297-11.359-4.961-20.992-4.961   c-8.945,0-16.125,1.813-21.625,5.43c-5.492,3.594-8.218,7.945-8.218,13c0,3.141,0.921,5.891,2.788,8.148   c1.875,2.297,4.438,4.258,7.703,5.898c3.25,1.656,6.563,2.914,9.922,3.891c3.336,0.914,8.844,2.258,16.555,4.023   c9.617,2.094,18.336,4.391,26.156,6.906c7.805,2.498,14.461,5.514,19.953,9.092c5.508,3.609,9.773,8.086,12.82,13.57   c3.085,5.469,4.608,12.164,4.601,20.094C323.919,306.389,321.247,314.92,315.951,322.529z" fill="#F4F6F9" id="Skype_2_"/></g></svg>
+          </a>
+        </section>
+      </article>
     </main>
-    <footer class="contacts container">
+    <footer class="contacts">
       <div class="contacts__site">
         <span class="contacts__site-adress">lavrik-site.com</span>
       </div>
     </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js'></script>
+    <script src="js/scriptSP.js"></script>
   </body>
+
 </html>
