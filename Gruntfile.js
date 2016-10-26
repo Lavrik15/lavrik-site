@@ -2,7 +2,6 @@ module.exports = function(grunt) {
 
   // подключаем плагин load-grunt-tasks, чтобы не перечислять все прочие плагины
   require('load-grunt-tasks')(grunt);
-
   // описываем задачи, которые планируем использовать (их запуск - см. низ этого файла)
   grunt.initConfig({
 
@@ -64,6 +63,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+
 
     // процесс копирования
     copy: {
@@ -157,6 +157,14 @@ module.exports = function(grunt) {
       },
     },
 
+    // минификатор js
+    // uglify: {
+    //     build: {
+    //         src: 'build/js/pageload.json',
+    //         dest: 'build/js/pageload.min.json'
+    //     }
+    // },
+
     // локальный сервер, автообновление
     browserSync: {
       dev: {
@@ -183,6 +191,31 @@ module.exports = function(grunt) {
           }
         }
       }
+    },
+    // imagemin: {
+    //     dynamic: {
+    //         files: [{
+    //             expand: true,
+    //             cwd: 'src/img/',
+    //             src: ['**/*.{png,jpg,gif}'],
+    //             dest: 'build/img'
+    //         }]
+    //     }
+    // }
+    imagemin: {                          // Task
+      static: {                          // Target
+        options: {                       // Target options
+          optimizationLevel: 7,
+        }
+      },
+      dynamic: {                         // Another target
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'src/img/',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: 'build/img'                  // Destination path prefix
+        }]
+      }
     }
 
   });
@@ -204,12 +237,13 @@ module.exports = function(grunt) {
     'less',
     'postcss',
     'cmq',
-    'cssmin',
+    'cssmin'
   ]);
 
   // только обработка картинок
   grunt.registerTask('img', [
     'copy:img',
+    'imagemin'
   ]);
 
   // сборка
@@ -219,5 +253,6 @@ module.exports = function(grunt) {
     'includereplace:html',
     'gh-pages',
   ]);
+
 
 };

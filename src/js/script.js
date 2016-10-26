@@ -1,16 +1,16 @@
-function clickLink(elem) {
-  event.preventDefault();
-  var href = '../pageload.json';
-
-  console.log(href);
-  console.log(typeof href);
-  $.getJSON(href, 'limit=2', callBack);
-  // $(".page").load(href + " #page-load", function(){
-  //   console.log('курлык');
-  // });
-}
-function callBack(data) {
-  console.log(data)
-  console.log('kjkm');
-  // $('.page').html(dat);
+$(document).ready(function(){
+  $('.navbar__list-link').bind('click', clickLink);
+});
+function clickLink() {
+  console.log($(this));
+  $('.navbar__list-link').removeClass('active');
+  $(this).addClass('active');
+  if ($(this).hasClass('contacts-link')) {
+    $('.about').slideUp(1000);
+    $('.contacts-page').slideDown(1000);
+  }
+  if ($(this).hasClass('about-link')) {
+    $('.contacts-page').slideUp(2000);
+    $('.about').slideDown(2000);
+  }
 }

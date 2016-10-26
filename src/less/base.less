@@ -6,6 +6,40 @@ body {
   font-weight: normal;
   letter-spacing: 3px;
   font-size: 13px;
+  padding-top: 50px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 19px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 71px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 /*@font-face {
   font-family: "SegoeUILight";
@@ -32,18 +66,34 @@ body {
   background-size: cover;
 }
 .container {
-  max-width: 940px;
-  margin: 0 auto;
   padding: 0 10px;
+  padding: 0 10px;
+  height: 100%;
 }
 .centering {
-  width: 250px;
+  width: 100%;
   position: absolute;
-  height: 100px;
-  top: 0;
-  bottom: 0;
+  max-height: 100%;
+  top: 50%;
   left: 50%;
-  margin: auto;
-  margin-left: -125px;
+  transform: translate(-50%,-50%);
+  height: 100%;
 }
-
+.my-gallery {
+  width: 100%;
+  float: left;
+  text-align: left;
+  font-size: 0px;
+}
+.my-gallery img {
+  width: 100%;
+  height: auto;
+}
+.my-gallery figure {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  width: 150px;
+}
+.my-gallery figcaption {
+  display: none;
+}
