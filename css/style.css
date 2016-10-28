@@ -425,7 +425,7 @@ th {
 }
 
 body {
-	background-color: gray;
+	background: gray url('../img/background.jpg') no-repeat 50% 50%;
 	color: #51646b;
 	font-family: "SegoeUILight", Arial, sans-serif;
 	font-style: normal;
