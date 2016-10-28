@@ -884,3 +884,12 @@ body { /*background: gray url('../img/background.jpg') no-repeat 50% 50%;*/
 	text-decoration: underline;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+.centering {
+	width: auto;
+	height: auto;
+}
+
+}
+
