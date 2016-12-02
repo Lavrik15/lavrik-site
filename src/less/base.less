@@ -7,6 +7,7 @@
  */
 
 html {
+	font-size: 100%;
 	font-family: sans-serif; /* 1 */
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
@@ -424,7 +425,7 @@ th {
 }
 
 body {
-	background-color: gray;
+	/*background: gray url('../img/background.jpg') no-repeat 50% 50%;*/
 	color: #51646b;
 	font-family: "SegoeUILight", Arial, sans-serif;
 	font-style: normal;
@@ -494,9 +495,23 @@ body {
 	min-height: 100%;
 	width: auto;
 	height: auto;
-	z-index: -100;
+	z-index: -10;
 	transform: translateX(-50%) translateY(-50%);
 	will-change: transform;
+	background-size: cover;
+}
+#bg-2 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -11;
+	transform: translateX(-50%) translateY(-50%);
+	will-change: transform;
+	background: url(../img/background.jpg) 50% 50% no-repeat gray;
 	background-size: cover;
 }
 
@@ -513,12 +528,13 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	height: 100%;
+	//height: auto;
 }
 
 .my-gallery {
 	width: 100%;
 	float: left;
-	text-align: left;
+	text-align: center;
 	font-size: 0px;
 }
 
@@ -541,6 +557,7 @@ body {
 	max-width: 500px;
 	margin: 0 auto;
 	margin-top: 30px;
+	padding: .5rem;
 	display: none;
 }
 
@@ -868,3 +885,16 @@ body {
 	text-decoration: underline;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.centering {
+	    width: auto;
+	    height: auto;
+	}
+
+}
+
+@supports (-ms-accelerator:true) {
+    .centering {
+        height: auto;
+    }
+}
