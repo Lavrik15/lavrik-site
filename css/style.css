@@ -685,6 +685,11 @@ body { /*background: gray url('../img/background.jpg') no-repeat 50% 50%;*/
 	text-transform: uppercase;
 }
 
+.my-gallery .img-prev {
+	width: 150px;
+	height: 151px;
+}
+
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 
 /*

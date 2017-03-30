@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="css/style.min.css">
+    
     <title>Lavrik</title>
     <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="js/script.js"></script>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <link rel="stylesheet" href="css/style.min.css">
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="css/IEstyle.css" />
     <![endif]-->
@@ -34,6 +35,7 @@
           <div class="about__image-wrapper">
             <section class="about__preview-block">
               <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                <!--  -->
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="img/work1-min.png" itemprop="contentUrl" data-size="1024x1024">
                     <img src="img/work1_311.png" itemprop="thumbnail" alt="Image description" />
@@ -42,14 +44,16 @@
                     <a class="about__site-text" href="http://62.141.123.25/teleclick/v11/build/index.html">посмотреть сайт</a>
                   </figcaption>
                 </figure>
+                <!--  -->
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="img/work2-min.jpg" itemprop="contentUrl" data-size="1024x1024">
                     <img src="img/work2_311.png" itemprop="thumbnail" alt="beeline" />
                   </a>
                   <figcaption itemprop="caption description">
-                  <a class="about__site-text" href="http://62.141.123.25/amediateka2/main.php">посмотреть сайт</a>
+                  <a class="about__site-text" href="http://62.141.123.25/amediateka2/main.php?q=info/film_block/-1/45/575">посмотреть сайт</a>
                   </figcaption>
                 </figure>
+                <!--  -->
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="img/work4-min.png" itemprop="contentUrl" data-size="1024x1024">
                     <img src="img/work4_311.png" itemprop="thumbnail" alt="Pink adaptive" />
@@ -58,6 +62,7 @@
                   <a class="about__site-text" href="https://lavrik15.github.io/Pink-adaptive/">посмотреть сайт</a>
                   </figcaption>
                 </figure>
+                <!-- дубровский -->
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="img/work3-min.jpg" itemprop="contentUrl" data-size="1024x1024">
                     <img src="img/work3_311.png" itemprop="thumbnail" alt="Pink adaptive" />
@@ -66,83 +71,57 @@
                   <a class="about__site-text" href="http://62.141.123.25/lavrik/video__/main.php">посмотреть сайт</a>
                   </figcaption>
                 </figure>
+                <!-- техномарт -->
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                   <a href="img/work5-min.png" itemprop="contentUrl" data-size="1024x1024">
                     <img src="img/work5_311.png" itemprop="thumbnail" alt="Pink adaptive" />
                   </a>
                   <figcaption itemprop="caption description">
-                  <a class="about__site-text" href="https://lavrik15.github.io/technomart/">посмотреть сайт</a>
+                  <a class="about__site-text" href="http://lavrik15.github.io/technomart/">посмотреть сайт</a>
                   </figcaption>
                 </figure>
+                <!--  -->
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                  <a href="img/work6-min.png" itemprop="contentUrl" data-size="1024x1024">
-                    <img src="img/work6_311.png" itemprop="thumbnail" alt="Pink adaptive" />
+                  <a href="img/wok7.png" itemprop="contentUrl" data-size="1024x1024">
+                    <img class="img-prev" src="img/wok7.png" itemprop="thumbnail" alt="Pink adaptive" />
                   </a>
                   <figcaption itemprop="caption description">
-                  <a class="about__site-text" href="https://lavrik15.github.io/foinni/">посмотреть сайт</a>
+                  <a class="about__site-text" href="https://lavrik15.github.io/supp-ort/">посмотреть сайт</a>
                   </figcaption>
                 </figure>
               </div>
-
-
-
-
             <!-- Root element of PhotoSwipe. Must have class pswp. -->
             <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="pswp__bg"></div>
+              <div class="pswp__scroll-wrap">
+              <div class="pswp__container">
+                  <div class="pswp__item"></div>
+                  <div class="pswp__item"></div>
+                  <div class="pswp__item"></div>
+              </div>
+              <div class="pswp__ui pswp__ui--hidden">
+                  <div class="pswp__top-bar">
+                      <div class="pswp__counter"></div>
+                      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-                <!-- Background of PhotoSwipe.
-                     It's a separate element, as animating opacity is faster than rgba(). -->
-                <div class="pswp__bg"></div>
-
-                <!-- Slides wrapper with overflow:hidden. -->
-                <div class="pswp__scroll-wrap">
-
-                    <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-                    <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-                    <div class="pswp__container">
-                        <div class="pswp__item"></div>
-                        <div class="pswp__item"></div>
-                        <div class="pswp__item"></div>
-                    </div>
-
-                    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-                    <div class="pswp__ui pswp__ui--hidden">
-
-                        <div class="pswp__top-bar">
-
-
-                            <div class="pswp__counter"></div>
-
-                            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-
-
-                            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                            <div class="pswp__preloader">
-                                <div class="pswp__preloader__icn">
-                                  <div class="pswp__preloader__cut">
-                                    <div class="pswp__preloader__donut"></div>
-                                  </div>
-                                </div>
+                      <div class="pswp__preloader">
+                          <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                              <div class="pswp__preloader__donut"></div>
                             </div>
-                        </div>
-
-
-                        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                        </button>
-
-                        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                        </button>
-
-                        <div class="pswp__caption">
-                            <div class="pswp__caption__center"></div>
-                        </div>
-
+                          </div>
                       </div>
-
-                    </div>
-
+                  </div>
+                  <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                  </button>
+                  <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                  </button>
+                  <div class="pswp__caption">
+                      <div class="pswp__caption__center"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             </section>
           </div>
